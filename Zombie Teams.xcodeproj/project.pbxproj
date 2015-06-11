@@ -13,6 +13,9 @@
 		9763E1701AA7D48800E6B6F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9763E16F1AA7D48800E6B6F8 /* Images.xcassets */; };
 		9763E1731AA7D48800E6B6F8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9763E1711AA7D48800E6B6F8 /* LaunchScreen.xib */; };
 		9763E17F1AA7D48900E6B6F8 /* z_teams_3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9763E17E1AA7D48900E6B6F8 /* z_teams_3Tests.swift */; };
+		9763E1891AA7DA8600E6B6F8 /* ViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9763E1881AA7DA8600E6B6F8 /* ViewTwo.swift */; };
+		9792E4181AA939D70069AE2C /* Dont Laugh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9792E4161AA939D70069AE2C /* Dont Laugh.mp3 */; };
+		9792E4191AA939D70069AE2C /* from shadows.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9792E4171AA939D70069AE2C /* from shadows.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +29,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9763E1631AA7D48800E6B6F8 /* z teams 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "z teams 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9763E1631AA7D48800E6B6F8 /* Zombie Teams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zombie Teams.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9763E1671AA7D48800E6B6F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9763E1681AA7D48800E6B6F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9763E16A1AA7D48800E6B6F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9763E16D1AA7D48800E6B6F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9763E16F1AA7D48800E6B6F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9763E1721AA7D48800E6B6F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		9763E1781AA7D48900E6B6F8 /* z teams 3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "z teams 3Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9763E1781AA7D48900E6B6F8 /* Zombie TeamsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Zombie TeamsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9763E17D1AA7D48900E6B6F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9763E17E1AA7D48900E6B6F8 /* z_teams_3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = z_teams_3Tests.swift; sourceTree = "<group>"; };
+		9763E1881AA7DA8600E6B6F8 /* ViewTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTwo.swift; sourceTree = "<group>"; };
+		9792E4161AA939D70069AE2C /* Dont Laugh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Dont Laugh.mp3"; sourceTree = "<group>"; };
+		9792E4171AA939D70069AE2C /* from shadows.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "from shadows.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +74,8 @@
 		9763E1641AA7D48800E6B6F8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9763E1631AA7D48800E6B6F8 /* z teams 3.app */,
-				9763E1781AA7D48900E6B6F8 /* z teams 3Tests.xctest */,
+				9763E1631AA7D48800E6B6F8 /* Zombie Teams.app */,
+				9763E1781AA7D48900E6B6F8 /* Zombie TeamsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				9763E1681AA7D48800E6B6F8 /* AppDelegate.swift */,
+				9763E1881AA7DA8600E6B6F8 /* ViewTwo.swift */,
 				9763E16A1AA7D48800E6B6F8 /* ViewController.swift */,
 				9763E16C1AA7D48800E6B6F8 /* Main.storyboard */,
 				9763E16F1AA7D48800E6B6F8 /* Images.xcassets */,
@@ -90,6 +97,8 @@
 		9763E1661AA7D48800E6B6F8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9792E4161AA939D70069AE2C /* Dont Laugh.mp3 */,
+				9792E4171AA939D70069AE2C /* from shadows.mp3 */,
 				9763E1671AA7D48800E6B6F8 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -115,9 +124,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9763E1621AA7D48800E6B6F8 /* z teams 3 */ = {
+		9763E1621AA7D48800E6B6F8 /* Zombie Teams */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9763E1821AA7D48900E6B6F8 /* Build configuration list for PBXNativeTarget "z teams 3" */;
+			buildConfigurationList = 9763E1821AA7D48900E6B6F8 /* Build configuration list for PBXNativeTarget "Zombie Teams" */;
 			buildPhases = (
 				9763E15F1AA7D48800E6B6F8 /* Sources */,
 				9763E1601AA7D48800E6B6F8 /* Frameworks */,
@@ -127,14 +136,14 @@
 			);
 			dependencies = (
 			);
-			name = "z teams 3";
+			name = "Zombie Teams";
 			productName = "z teams 3";
-			productReference = 9763E1631AA7D48800E6B6F8 /* z teams 3.app */;
+			productReference = 9763E1631AA7D48800E6B6F8 /* Zombie Teams.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9763E1771AA7D48900E6B6F8 /* z teams 3Tests */ = {
+		9763E1771AA7D48900E6B6F8 /* Zombie TeamsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9763E1851AA7D48900E6B6F8 /* Build configuration list for PBXNativeTarget "z teams 3Tests" */;
+			buildConfigurationList = 9763E1851AA7D48900E6B6F8 /* Build configuration list for PBXNativeTarget "Zombie TeamsTests" */;
 			buildPhases = (
 				9763E1741AA7D48900E6B6F8 /* Sources */,
 				9763E1751AA7D48900E6B6F8 /* Frameworks */,
@@ -145,9 +154,9 @@
 			dependencies = (
 				9763E17A1AA7D48900E6B6F8 /* PBXTargetDependency */,
 			);
-			name = "z teams 3Tests";
+			name = "Zombie TeamsTests";
 			productName = "z teams 3Tests";
-			productReference = 9763E1781AA7D48900E6B6F8 /* z teams 3Tests.xctest */;
+			productReference = 9763E1781AA7D48900E6B6F8 /* Zombie TeamsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -161,6 +170,7 @@
 				TargetAttributes = {
 					9763E1621AA7D48800E6B6F8 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = E53QFUQT85;
 					};
 					9763E1771AA7D48900E6B6F8 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -168,7 +178,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9763E15E1AA7D48800E6B6F8 /* Build configuration list for PBXProject "z teams 3" */;
+			buildConfigurationList = 9763E15E1AA7D48800E6B6F8 /* Build configuration list for PBXProject "Zombie Teams" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -181,8 +191,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9763E1621AA7D48800E6B6F8 /* z teams 3 */,
-				9763E1771AA7D48900E6B6F8 /* z teams 3Tests */,
+				9763E1621AA7D48800E6B6F8 /* Zombie Teams */,
+				9763E1771AA7D48900E6B6F8 /* Zombie TeamsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -193,7 +203,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9763E16E1AA7D48800E6B6F8 /* Main.storyboard in Resources */,
+				9792E4191AA939D70069AE2C /* from shadows.mp3 in Resources */,
 				9763E1731AA7D48800E6B6F8 /* LaunchScreen.xib in Resources */,
+				9792E4181AA939D70069AE2C /* Dont Laugh.mp3 in Resources */,
 				9763E1701AA7D48800E6B6F8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +226,7 @@
 			files = (
 				9763E16B1AA7D48800E6B6F8 /* ViewController.swift in Sources */,
 				9763E1691AA7D48800E6B6F8 /* AppDelegate.swift in Sources */,
+				9763E1891AA7DA8600E6B6F8 /* ViewTwo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,7 +243,7 @@
 /* Begin PBXTargetDependency section */
 		9763E17A1AA7D48900E6B6F8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9763E1621AA7D48800E6B6F8 /* z teams 3 */;
+			target = 9763E1621AA7D48800E6B6F8 /* Zombie Teams */;
 			targetProxy = 9763E1791AA7D48900E6B6F8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -338,9 +351,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "z teams 3/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Zombie Teams";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -348,9 +364,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "z teams 3/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Zombie Teams";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -368,8 +387,8 @@
 				);
 				INFOPLIST_FILE = "z teams 3Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/z teams 3.app/z teams 3";
+				PRODUCT_NAME = "Zombie TeamsTests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zombie Teams.app/Zombie Teams";
 			};
 			name = Debug;
 		};
@@ -383,15 +402,15 @@
 				);
 				INFOPLIST_FILE = "z teams 3Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/z teams 3.app/z teams 3";
+				PRODUCT_NAME = "Zombie TeamsTests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zombie Teams.app/Zombie Teams";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9763E15E1AA7D48800E6B6F8 /* Build configuration list for PBXProject "z teams 3" */ = {
+		9763E15E1AA7D48800E6B6F8 /* Build configuration list for PBXProject "Zombie Teams" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9763E1801AA7D48900E6B6F8 /* Debug */,
@@ -400,21 +419,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9763E1821AA7D48900E6B6F8 /* Build configuration list for PBXNativeTarget "z teams 3" */ = {
+		9763E1821AA7D48900E6B6F8 /* Build configuration list for PBXNativeTarget "Zombie Teams" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9763E1831AA7D48900E6B6F8 /* Debug */,
 				9763E1841AA7D48900E6B6F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		9763E1851AA7D48900E6B6F8 /* Build configuration list for PBXNativeTarget "z teams 3Tests" */ = {
+		9763E1851AA7D48900E6B6F8 /* Build configuration list for PBXNativeTarget "Zombie TeamsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9763E1861AA7D48900E6B6F8 /* Debug */,
 				9763E1871AA7D48900E6B6F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

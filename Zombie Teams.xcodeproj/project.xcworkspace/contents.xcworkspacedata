@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:z teams 3.xcodeproj">
+      location = "self:Zombie Teams.xcodeproj">
    </FileRef>
 </Workspace>
