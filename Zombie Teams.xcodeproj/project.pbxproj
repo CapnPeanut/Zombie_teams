@@ -14,6 +14,8 @@
 		9763E1731AA7D48800E6B6F8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9763E1711AA7D48800E6B6F8 /* LaunchScreen.xib */; };
 		9763E17F1AA7D48900E6B6F8 /* z_teams_3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9763E17E1AA7D48900E6B6F8 /* z_teams_3Tests.swift */; };
 		9763E1891AA7DA8600E6B6F8 /* ViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9763E1881AA7DA8600E6B6F8 /* ViewTwo.swift */; };
+		977833781C6FCCBB00BFE8BC /* FourPlayerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977833771C6FCCBB00BFE8BC /* FourPlayerClass.swift */; };
+		9778337A1C6FCCD800BFE8BC /* SixPlayerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977833791C6FCCD800BFE8BC /* SixPlayerClass.swift */; };
 		9792E4181AA939D70069AE2C /* Dont Laugh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9792E4161AA939D70069AE2C /* Dont Laugh.mp3 */; };
 		9792E4191AA939D70069AE2C /* from shadows.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9792E4171AA939D70069AE2C /* from shadows.mp3 */; };
 /* End PBXBuildFile section */
@@ -40,6 +42,8 @@
 		9763E17D1AA7D48900E6B6F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9763E17E1AA7D48900E6B6F8 /* z_teams_3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = z_teams_3Tests.swift; sourceTree = "<group>"; };
 		9763E1881AA7DA8600E6B6F8 /* ViewTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTwo.swift; sourceTree = "<group>"; };
+		977833771C6FCCBB00BFE8BC /* FourPlayerClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourPlayerClass.swift; sourceTree = "<group>"; };
+		977833791C6FCCD800BFE8BC /* SixPlayerClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SixPlayerClass.swift; sourceTree = "<group>"; };
 		9792E4161AA939D70069AE2C /* Dont Laugh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Dont Laugh.mp3"; sourceTree = "<group>"; };
 		9792E4171AA939D70069AE2C /* from shadows.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "from shadows.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				9763E1681AA7D48800E6B6F8 /* AppDelegate.swift */,
+				977833791C6FCCD800BFE8BC /* SixPlayerClass.swift */,
+				977833771C6FCCBB00BFE8BC /* FourPlayerClass.swift */,
 				9763E1881AA7DA8600E6B6F8 /* ViewTwo.swift */,
 				9763E16A1AA7D48800E6B6F8 /* ViewController.swift */,
 				9763E16C1AA7D48800E6B6F8 /* Main.storyboard */,
@@ -165,15 +171,20 @@
 		9763E15B1AA7D48800E6B6F8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Brian Atchley";
 				TargetAttributes = {
 					9763E1621AA7D48800E6B6F8 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = E53QFUQT85;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 					9763E1771AA7D48900E6B6F8 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = E53QFUQT85;
+						LastSwiftMigration = 0800;
 						TestTargetID = 9763E1621AA7D48800E6B6F8;
 					};
 				};
@@ -227,6 +238,8 @@
 				9763E16B1AA7D48800E6B6F8 /* ViewController.swift in Sources */,
 				9763E1691AA7D48800E6B6F8 /* AppDelegate.swift in Sources */,
 				9763E1891AA7DA8600E6B6F8 /* ViewTwo.swift in Sources */,
+				977833781C6FCCBB00BFE8BC /* FourPlayerClass.swift in Sources */,
+				9778337A1C6FCCD800BFE8BC /* SixPlayerClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,9 +298,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Brian Atchley (RK5NQ5T8AK)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -328,6 +343,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Brian Atchley (RK5NQ5T8AK)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -353,10 +369,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = E53QFUQT85;
 				INFOPLIST_FILE = "z teams 3/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BrianAtchley.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Zombie Teams";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -366,10 +385,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = E53QFUQT85;
 				INFOPLIST_FILE = "z teams 3/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BrianAtchley.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Zombie Teams";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -377,17 +399,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				DEVELOPMENT_TEAM = E53QFUQT85;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "z teams 3Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BrianAtchley.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Zombie TeamsTests";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zombie Teams.app/Zombie Teams";
 			};
 			name = Debug;
@@ -396,13 +417,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				DEVELOPMENT_TEAM = E53QFUQT85;
 				INFOPLIST_FILE = "z teams 3Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BrianAtchley.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Zombie TeamsTests";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zombie Teams.app/Zombie Teams";
 			};
 			name = Release;

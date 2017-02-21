@@ -13,30 +13,119 @@ import iAd
 
 class ViewController: UIViewController {
     
-//    var positions = Positions()
-//    var names = Names()
-//    var backgroundMusic = AVAudioPlayer()
-//    var backgroundMusicTwo = AVAudioPlayer()
+    var positions = Positions()
+    var names = Names()
+    
+    
+    
+    
+    
+    
+   
+    var backgroundMusicPlayer = AVAudioPlayer()
+    
+    func playBackgroundMusic(_ filename: String) {
+        let url = Bundle.main.url(forResource: filename, withExtension: nil)
+        guard let newURL = url else {
+            print("Could not find file: \(filename)")
+            return
+        }
+        do {
+            backgroundMusicPlayer = try AVAudioPlayer(contentsOf: newURL)
+            backgroundMusicPlayer.numberOfLoops = -1
+            backgroundMusicPlayer.prepareToPlay()
+            backgroundMusicPlayer.play()
+        } catch let error as NSError {
+            print(error.description)
+        }
+    }
+
+    
+
+        
+        
+        
+        @IBAction func fourPlayerMusic(_ sender: AnyObject) {
+        playBackgroundMusic("from shadows.mp3")
+        }
+        
+        
+        @IBAction func sixPlayerMusic(_ sender: AnyObject) {
+        playBackgroundMusic("Dont Laugh.mp3")
+        }
+
+    
+    @IBAction func sixPlayerNavMusic(_ sender: AnyObject) {
+        if(backgroundMusicPlayer.isPlaying == true)
+        {
+            backgroundMusicPlayer.stop()
+            backgroundMusicPlayer.currentTime = 0
+            
+            playBackgroundMusic("Dont Laugh.mp3")
+        }
+        else
+        {
+          playBackgroundMusic("Dont Laugh.mp3")
+        }
+        
+        
+//        if backgroundMusicPlayer.playing {
+//            backgroundMusicPlayer.stop()
+//        }
+//        playBackgroundMusic("Dont Laugh.mp3")
+    
+    }
+    
+    
+    @IBAction func fourPlayerNavMusic(_ sender: AnyObject) {
+        
+        if(backgroundMusicPlayer.isPlaying == true)
+        {
+            backgroundMusicPlayer.stop()
+            backgroundMusicPlayer.currentTime = 0
+            
+            playBackgroundMusic("from shadows.mp3")
+        }
+        else
+        {
+            playBackgroundMusic("from shadows.mp3")
+        }
+
+        
+//        if backgroundMusicPlayer.playing {
+//            backgroundMusicPlayer.stop()
+//        }
+//        playBackgroundMusic("from shadows.mp3")
+    }
+    
+    
+    
     
    // 6 player crap
     
     
-
-    
+//    @IBAction func playMusic(sender: AnyObject) {
+//        music();
+//    }
+//
+//    
+//    @IBAction func playMusicSixPlayers(sender: AnyObject) {
+//        music()
+//    }
     
    
-    @IBAction func fourPlayerButton(sender: AnyObject) {
-        backgroundMusic = self.setupAudioPlayerWithFile("from shadows", type:"mp3")
-        backgroundMusic.volume = 0.3
-        backgroundMusic.play()
-    }
-    @IBAction func sixPlayerButton(sender: AnyObject) {
-        backgroundMusicTwo = self.setupAudioPlayerWithFile("Dont Laugh", type:"mp3")
-        backgroundMusicTwo.volume = 0.3
-        backgroundMusicTwo.play()
-        
-        
-    }
+//    @IBAction func fourPlayerButton(sender: AnyObject) {
+//        backgroundMusic = self.setupAudioPlayerWithFile("from shadows", type:"mp3")
+//        backgroundMusic.volume = 0.3
+//        backgroundMusic.play()
+//    }
+//    @IBAction func sixPlayerButton(sender: AnyObject) {
+//        backgroundMusicTwo = self.setupAudioPlayerWithFile("Dont Laugh", type:"mp3")
+//        backgroundMusicTwo.volume = 0.3
+//        backgroundMusicTwo.play()
+//        
+//        
+//    }
     
     
     
@@ -53,7 +142,7 @@ class ViewController: UIViewController {
 
     
     
-    @IBAction func newPositionsSixPlayer(sender: AnyObject) {
+    @IBAction func newPositionsSixPlayer(_ sender: AnyObject) {
         var sweetness = positions
         
         
@@ -64,7 +153,7 @@ class ViewController: UIViewController {
         let randPosition = sweetness.positionsArray[arrayKey]
         
         // make sure the number isnt repeated
-        sweetness.positionsArray.removeAtIndex(arrayKey)
+        sweetness.positionsArray.remove(at: arrayKey)
         
         return randPosition
         }
@@ -133,76 +222,89 @@ class ViewController: UIViewController {
     @IBOutlet weak var addDaniel: UIButton!
     @IBOutlet weak var addTwomey: UIButton!
     
-    @IBAction func addMikePressed(sender: AnyObject) {
-       
-        if contains(names.namesArray, addMikeLabel.text!){
-            addMike.backgroundColor = UIColor.blackColor()
-            let gay = find(names.namesArray, addMikeLabel.text!)
-            names.namesArray.removeAtIndex(gay!)
+    @IBAction func addMikePressed(_ sender: AnyObject) {
+        if (names.namesArray.contains(addMikeLabel.text!))
+//        if contains(names.namesArray, addMikeLabel.text!)
+        {
+            addMike.backgroundColor = UIColor.black
+//            let gay = find(names.namesArray, addMikeLabel.text!)
+            let gay = names.namesArray.index(of: addMikeLabel.text!)
+            names.namesArray.remove(at: gay!)
         }
         else {
         
-        addMike.backgroundColor = UIColor.greenColor()
+        addMike.backgroundColor = UIColor.green
         names.namesArray.append(addMikeLabel.text!)
         }
     }
     
     
-    @IBAction func addChrisPressed(sender: AnyObject) {
-        if contains(names.namesArray, addChrisLabel.text!){
-            addChris.backgroundColor = UIColor.blackColor()
-            let homo = find(names.namesArray, addChrisLabel.text!)
-            names.namesArray.removeAtIndex(homo!)
+    @IBAction func addChrisPressed(_ sender: AnyObject) {
+        if (names.namesArray.contains(addChrisLabel.text!))
+        {
+        //if contains(names.namesArray, addChrisLabel.text!){
+            addChris.backgroundColor = UIColor.black
+  //          let homo = find(names.namesArray, addChrisLabel.text!)
+        let homo = names.namesArray.index(of: addChrisLabel.text!)
+            names.namesArray.remove(at: homo!)
         } else {
-        addChris.backgroundColor = UIColor.greenColor()
+        addChris.backgroundColor = UIColor.green
         names.namesArray.append(addChrisLabel.text!)
         }
     }
     
     
     
-    @IBAction func addBrianPressed(sender: AnyObject) {
-        if contains(names.namesArray, addBrianLabel.text!){
-            addBrian.backgroundColor = UIColor.blackColor()
-            let fag = find(names.namesArray, addBrianLabel.text!)
-            names.namesArray.removeAtIndex(fag!)
+    @IBAction func addBrianPressed(_ sender: AnyObject) {
+        if (names.namesArray.contains(addBrianLabel.text!)){
+ //       if contains(names.namesArray, addBrianLabel.text!){
+            addBrian.backgroundColor = UIColor.black
+ //           let fag = find(names.namesArray, addBrianLabel.text!)
+            let fag = names.namesArray.index(of: addBrianLabel.text!)
+            names.namesArray.remove(at: fag!)
         } else{
-        addBrian.backgroundColor = UIColor.greenColor()
+        addBrian.backgroundColor = UIColor.green
         names.namesArray.append(addBrianLabel.text!)
         }
     }
     
     
-    @IBAction func addPatricePressed(sender: AnyObject) {
-        if contains(names.namesArray, addPatriceLabel.text!){
-            addPatrice.backgroundColor = UIColor.blackColor()
-            let queer = find(names.namesArray, addPatriceLabel.text!)
-            names.namesArray.removeAtIndex(queer!)
+    @IBAction func addPatricePressed(_ sender: AnyObject) {
+        if (names.namesArray.contains(addPatriceLabel.text!)){
+//        if contains(names.namesArray, addPatriceLabel.text!){
+            addPatrice.backgroundColor = UIColor.black
+//            let queer = find(names.namesArray, addPatriceLabel.text!)
+            let queer = names.namesArray.index(of: addPatriceLabel.text!)
+            names.namesArray.remove(at: queer!)
         } else {
-        addPatrice.backgroundColor = UIColor.greenColor()
+        addPatrice.backgroundColor = UIColor.green
         names.namesArray.append(addPatriceLabel.text!)
     }
     }
     
     
-    @IBAction func addDanielPressed(sender: AnyObject) {
-        if contains(names.namesArray, addDanielLabel.text!){
-            addDaniel.backgroundColor = UIColor.blackColor()
-            let balls = find(names.namesArray, addDanielLabel.text!)
-            names.namesArray.removeAtIndex(balls!)
+    @IBAction func addDanielPressed(_ sender: AnyObject) {
+        if (names.namesArray.contains(addDanielLabel.text!)){
+//        if contains(names.namesArray, addDanielLabel.text!){
+            addDaniel.backgroundColor = UIColor.black
+//            let balls = find(names.namesArray, addDanielLabel.text!)
+            let balls = names.namesArray.index(of: addDanielLabel.text!)
+            names.namesArray.remove(at: balls!)
         
         } else {
-        addDaniel.backgroundColor = UIColor.greenColor()
+        addDaniel.backgroundColor = UIColor.green
         names.namesArray.append(addDanielLabel.text!)
     }
     }
-    @IBAction func addTwomeyPressed(sender: AnyObject) {
-        if contains(names.namesArray, addTwomeyLabel.text!){
-            addTwomey.backgroundColor = UIColor.blackColor()
-            let nuts = find(names.namesArray, addTwomeyLabel.text!)
-            names.namesArray.removeAtIndex(nuts!)
+    @IBAction func addTwomeyPressed(_ sender: AnyObject) {
+        if (names.namesArray.contains(addTwomeyLabel.text!)){
+//        if contains(names.namesArray, addTwomeyLabel.text!){
+            addTwomey.backgroundColor = UIColor.black
+//            let nuts = find(names.namesArray, addTwomeyLabel.text!)
+            let nuts = names.namesArray.index(of: addTwomeyLabel.text!)
+            names.namesArray.remove(at: nuts!)
         } else {
-        addTwomey.backgroundColor = UIColor.greenColor()
+        addTwomey.backgroundColor = UIColor.green
         names.namesArray.append(addTwomeyLabel.text!)
         }
     }
@@ -277,7 +379,7 @@ class ViewController: UIViewController {
     
     
     
-    @IBAction func newPositionsButton(sender: AnyObject) {
+    @IBAction func newPositionsButton(_ sender: AnyObject) {
      /*   var a = names.namesArray[0]
         var b = names.namesArray[1]
         var c = names.namesArray[2]
@@ -301,12 +403,12 @@ class ViewController: UIViewController {
         let message = "Pick some dudes, bruh!"
         let okText = "OK"
         
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        let okButton = UIAlertAction(title: okText, style: UIAlertActionStyle.Cancel, handler: nil)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let okButton = UIAlertAction(title: okText, style: UIAlertActionStyle.cancel, handler: nil)
         alert.addAction(okButton)
         
         if names.namesArray.isEmpty {
-            presentViewController(alert, animated: true, completion: nil)
+            present(alert, animated: true, completion: nil)
         }
         else
         {
@@ -332,7 +434,7 @@ class ViewController: UIViewController {
             let randName = sweetnessTwo.namesArray[arrayKey]
             
             // make sure the number isnt repeated
-            sweetnessTwo.namesArray.removeAtIndex(arrayKey)
+            sweetnessTwo.namesArray.remove(at: arrayKey)
             
             
             
@@ -370,7 +472,7 @@ class ViewController: UIViewController {
             let randName = sweetnessTwo.namesArray[arrayKey]
             
             // make sure the number isnt repeated
-            sweetnessTwo.namesArray.removeAtIndex(arrayKey)
+            sweetnessTwo.namesArray.remove(at: arrayKey)
             
             
             
@@ -414,7 +516,7 @@ class ViewController: UIViewController {
             let randName = sweetnessTwo.namesArray[arrayKey]
             
             // make sure the number isnt repeated
-            sweetnessTwo.namesArray.removeAtIndex(arrayKey)
+            sweetnessTwo.namesArray.remove(at: arrayKey)
             
             
             
@@ -454,7 +556,7 @@ class ViewController: UIViewController {
             let randName = sweetnessTwo.namesArray[arrayKey]
             
             // make sure the number isnt repeated
-            sweetnessTwo.namesArray.removeAtIndex(arrayKey)
+            sweetnessTwo.namesArray.remove(at: arrayKey)
             
             
             
@@ -552,8 +654,23 @@ class ViewController: UIViewController {
         
     }
     
+  
     
-//    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 //    func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer  {
 //        //1
 //        var path = NSBundle.mainBundle().pathForResource(file as String, ofType:type as String)
@@ -569,34 +686,37 @@ class ViewController: UIViewController {
 //        //4
 //        return audioPlayer!
 //    }
-//  
-//    
-//
-//    
-//    
-//    
-//    
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        // Do any additional setup after loading the view, typically from a nib.
-//       
-//        
-//        
-//    }
-//    override func prepareForSegue(segue: UIStoryboardSegue,
-//        sender: AnyObject?) {
-//            
-//            let destination = segue.destinationViewController
-//                as! UIViewController
-//            destination.interstitialPresentationPolicy =
-//                ADInterstitialPresentationPolicy.Automatic
-//    }
-//
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
+  
+    
+
+    
+    
+    
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+       
+        
+        
+    }
+   // override func prepareForSegue(segue: UIStoryboardSegue,
+   //     sender: AnyObject?) {
+            
+   //         let destination = segue.destinationViewController
+                
+   //         destination.interstitialPresentationPolicy =
+   //             ADInterstitialPresentationPolicy.Automatic
+    
+  //  }
+    
+    
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 
 
 }

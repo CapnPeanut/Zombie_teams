@@ -24,9 +24,9 @@ struct Positions {
     ]
     
     func randomPosition() -> String {
-        var unsignedArrayCount = UInt32(positionsArray.count)
-        var unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
-        var randomNumber = Int(unsignedRandomNumber)
+        let unsignedArrayCount = UInt32(positionsArray.count)
+        let unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
+        let randomNumber = Int(unsignedRandomNumber)
         
         return positionsArray[randomNumber]
         
@@ -48,9 +48,9 @@ struct Names {
 
     
     func randomName() -> String {
-        var unsignedArrayCount = UInt32(namesArray.count)
-        var unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
-        var randomNumber = Int(unsignedRandomNumber)
+        let unsignedArrayCount = UInt32(namesArray.count)
+        let unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
+        let randomNumber = Int(unsignedRandomNumber)
         
         return namesArray[randomNumber]
     }
